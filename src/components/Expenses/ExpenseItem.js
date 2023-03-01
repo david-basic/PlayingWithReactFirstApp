@@ -3,7 +3,7 @@ import Card from "../UI/Card";
 import "./ExpenseItem.css";
 import { useState } from "react";
 
-function ExpenseItem(props) {
+export default function ExpenseItem(props) {
     const [title, setTitle] = useState(props.title);
     console.log("ExpenseItem evaluated by React");
 
@@ -25,4 +25,4 @@ function ExpenseItem(props) {
     );
 }
 
-export default ExpenseItem;
+//export default ExpenseItem;

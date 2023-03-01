@@ -1,7 +1,7 @@
 import Expenses from "./components/Expenses/Expenses";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
-function App() {
+export default function App() {
   const expenses = [
     {
       id: "e1",
@@ -32,4 +32,4 @@ function App() {
   );
 }
 
-export default App;
+//export default App;

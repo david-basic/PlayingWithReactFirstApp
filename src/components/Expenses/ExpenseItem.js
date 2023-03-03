@@ -1,18 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import ExpenseDate from "./ExpenseDate";
 import Card from "../UI/Card";
 import "./ExpenseItem.css";
-import { useState } from "react";
 
 const ExpenseItem = (props) => {
     const [title, setTitle] = useState(props.title);
-    console.log("ExpenseItem evaluated by React");
+    // const [ime_varijable, funkcija_za_mijenjanje_varijable_ubuduće] = useState(initial_value);
 
-    function clickHandler() {
+    const clickHandler = () => {
         setTitle("Updated!");
         console.log(title);
     }
+    console.log("ExpenseItem evaluated by React");
 
     return (
         <Card className="expense-item">
@@ -21,7 +21,6 @@ const ExpenseItem = (props) => {
                 <h2>{title}</h2>
                 <div className="expense-item__price">${props.amount}</div>
             </div>
-            <p> </p>
             <button onClick={clickHandler}>Change title</button>
         </Card>
     );

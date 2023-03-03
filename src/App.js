@@ -1,8 +1,9 @@
 import React from 'react';
+
 import Expenses from "./components/Expenses/Expenses";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function App() {
+const App = () => {
     const expenses = [
         {
             id: "e1",
@@ -38,4 +39,4 @@ export default function App() {
     );
 }
 
-//export default App;
+export default App;

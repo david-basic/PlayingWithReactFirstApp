@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 import Expenses from "./components/Expenses/Expenses";
-import NewExpense from './components/NewExpense/NewExpense';
+import NewExpense from "./components/NewExpense/NewExpense";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
@@ -32,12 +32,17 @@ const App = () => {
         },
     ];
 
+    const addExpenseHandler = (expense) => {
+        console.log("In app.js");
+        console.log(expense);
+    };
+
     return (
         <div>
-            <NewExpense />
+            <NewExpense onAddExpense={addExpenseHandler}/>
             <Expenses items={expenses}></Expenses>
         </div>
     );
-}
+};
 
 export default App;

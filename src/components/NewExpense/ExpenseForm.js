@@ -49,21 +49,25 @@ const ExpenseForm = (props) => {
             date: new Date(enteredDate),
         };
 
-        console.log("In expense form!")
+        console.log("In expense form!");
         props.onSaveExpenseData(expenseData); // when going child to parent we execute this function to pass data which is generated in the child
-
+        
         setEnteredTitle("");
         setEnteredAmount("");
         setEnteredDate("");
     };
-    
+
     // umjesto da radimo na buttonu onClick, kada je button type submit unutar forme citava forma se submita i onda mozemo na formi slusati za submit event
     return (
         <form onSubmit={expenseSubmitHandler}>
             <div className="new-expense__controls">
                 <div className="new-expense__control">
                     <label>Title</label>
-                    <input type="text" value={enteredTitle} onChange={titleChangeHandler} />
+                    <input
+                        type="text"
+                        value={enteredTitle}
+                        onChange={titleChangeHandler}
+                    />
                 </div>
                 <div className="new-expense__control">
                     <label>Amount</label>
@@ -87,6 +91,9 @@ const ExpenseForm = (props) => {
                 </div>
             </div>
             <div className="new-expense__actions">
+                <button type="button" onClick={props.onCancel}>
+                    Cancel
+                </button>
                 <button type="submit">Add expense</button>
             </div>
         </form>
